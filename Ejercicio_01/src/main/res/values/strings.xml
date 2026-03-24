@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Moneda</string>
+    <string name="edit_text_hint">Ingrese cantidad</string>
+    <string name="radio_dolares">Dólares</string>
+    <string name="radio_soles">Soles</string>
+    <string name="convertir">Convertir</string>
+</resources>
