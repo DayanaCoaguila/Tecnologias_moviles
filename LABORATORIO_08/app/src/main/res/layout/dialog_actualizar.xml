@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textSize="14sp"
+        android:textColor="#212121"/>
+
+    <EditText
+        android:id="@+id/dialogEtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="textPersonName"
+        android:hint="Nombre completo"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carrera:"
+        android:textSize="14sp"
+        android:textColor="#212121"/>
+
+    <Spinner
+        android:id="@+id/dialogSpinCarrera"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:spinnerMode="dropdown"
+        android:entries="array/carreras"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Curso:"
+        android:textSize="14sp"
+        android:textColor="#212121"/>
+
+    <Spinner
+        android:id="@+id/dialogSpinCurso"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:spinnerMode="dropdown"
+        android:entries="array/cursos"/>
+
+</LinearLayout>

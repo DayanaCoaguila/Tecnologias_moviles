@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Registro de Estudiantes"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1A237E"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Subtítulo contador -->
+    <TextView
+        android:id="@+id/tvContador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Estudiantes registrados: 0"
+        android:textSize="14sp"
+        android:textColor="#5C6BC0"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Etiqueta Nombre -->
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textSize="16sp"
+        android:textColor="#212121"
+        app:layout_constraintTop_toBottomOf="@id/tvContador"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Campo Nombre -->
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Escribe el nombre completo"
+        android:inputType="textPersonName"
+        android:background="@android:drawable/edit_text"
+        app:layout_constraintTop_toBottomOf="@id/tvNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Etiqueta Carrera -->
+    <TextView
+        android:id="@+id/tvCarrera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carrera:"
+        android:textSize="16sp"
+        android:textColor="#212121"
+        app:layout_constraintTop_toBottomOf="@id/etNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Spinner Carrera -->
+    <Spinner
+        android:id="@+id/spinCarrera"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:spinnerMode="dropdown"
+        android:entries="@array/carreras"
+        app:layout_constraintTop_toBottomOf="@id/tvCarrera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Etiqueta Curso -->
+    <TextView
+        android:id="@+id/tvCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Curso:"
+        android:textSize="16sp"
+        android:textColor="#212121"
+        app:layout_constraintTop_toBottomOf="@id/spinCarrera"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Spinner Curso -->
+    <Spinner
+        android:id="@+id/spinCurso"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:spinnerMode="dropdown"
+        android:entries="@array/cursos"
+        app:layout_constraintTop_toBottomOf="@id/tvCurso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Botón Guardar (Ejercicio 31) -->
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Guardar Estudiante"
+        android:backgroundTint="#1A237E"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/spinCurso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Botón Ver Lista (Ejercicio 32) -->
+    <Button
+        android:id="@+id/btnVerLista"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ver Lista de Estudiantes"
+        android:backgroundTint="#3949AB"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnGuardar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
